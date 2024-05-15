@@ -1,4 +1,4 @@
-import './App.css'
+import AppRoutes from "./routes";
 
 const App = () => {
   return (
@@ -6,6 +6,12 @@ const App = () => {
     
     </div>
   );
+function App() {
+    return (
+        <div>
+            <AppRoutes />
+        </div>
+    ) 
 }
 
 export default App;
