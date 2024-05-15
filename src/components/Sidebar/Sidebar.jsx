@@ -16,7 +16,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import DashboardIcon from 'src/assets/icons/Dashboard.svg';
 import TasklistIcon from 'src/assets/icons/Tasklist.svg';
-import PaymentsIcon from 'src/assets/icons/Payments.svg';
+import payments from 'src/assets/icons/payments.svg';
 import ServicesIcon from 'src/assets/icons/Services.svg';
 import TradeIcon from 'src/assets/icons/Trade.svg';
 import TransferIcon from 'src/assets/icons/Transfer.svg';
@@ -158,7 +158,7 @@ export default function MiniDrawer() {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-               < img src={PaymentsIcon} />
+               < img src={payments} />
             </ListItemIcon>
             <ListItemText primary={"Payments"} />
           </ListItemButton>
