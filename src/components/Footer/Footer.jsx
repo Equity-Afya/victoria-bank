@@ -1,11 +1,13 @@
-import React from 'react'
-
+import './Footer.css'
 const Footer = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <footer className="footer">
+      <div className="footer-content">
+        <p>&copy; 2024 Victoria Bank Limited</p>
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
+
