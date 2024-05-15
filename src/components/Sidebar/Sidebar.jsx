@@ -8,24 +8,15 @@ import List from '@mui/material/List';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import DashboardIcon from 'src/assets/icons/Dashboard.svg';
-import TasklistIcon from 'src/assets/icons/Tasklist.svg';
-import payments from 'src/assets/icons/payments.svg';
-import ServicesIcon from 'src/assets/icons/Services.svg';
-import TradeIcon from 'src/assets/icons/Trade.svg';
-import TransferIcon from 'src/assets/icons/Transfer.svg';
-import AccountIcon from 'src/assets/icons/Account.svg';
-import LogoutIcon from 'src/assets/icons/Logout.svg';
-import HumbergerIcon from 'src/assets/icons/Humburger.svg';
-
-
-
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
 
 
 const drawerWidth = 240;
@@ -107,106 +98,13 @@ export default function MiniDrawer() {
     setOpen(false);
   };
 
-  const list = (
-    <Box
-      sx={{ width: 250 }}
-      role="presentation"
-      onClick={handleDrawerClose}
-      onKeyDown={handleDrawerClose}
-    >
-      <List>
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              < img src ={DashboardIcon} />
-            </ListItemIcon>
-            <ListItemText primary={"Dashboard"} />
-          </ListItemButton>
-        </ListItem>
-        <Divider />
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              < img src={TasklistIcon} />
-            </ListItemIcon>
-            <ListItemText primary={"Task list"} />
-          </ListItemButton>
-        </ListItem>
-        <Divider />
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-             < img src={AccountIcon} />
-            </ListItemIcon>
-            <ListItemText primary={"Account"} />
-          </ListItemButton>
-        </ListItem>
-      </List>
-      <Divider />
-      <List>
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-             < img src={TransferIcon} />
-            </ListItemIcon>
-            <ListItemText primary={"Transfers"} />
-          </ListItemButton>
-        </ListItem>
-      </List>
-      <Divider />
-      <List>
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-               < img src={payments} />
-            </ListItemIcon>
-            <ListItemText primary={"Payments"} />
-          </ListItemButton>
-        </ListItem>
-      </List>
-      <Divider />
-      <List>
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              < img src={ServicesIcon} />
-            </ListItemIcon>
-            <ListItemText primary={"Services"} />
-          </ListItemButton>
-        </ListItem>
-      </List>
-      <Divider />
-      <List>
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-                < img src={TradeIcon} />
-            </ListItemIcon>
-            <ListItemText primary={"Trade"} />
-          </ListItemButton>
-        </ListItem>
-      </List>
-      <Divider />
-      <List>
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-               < img src={LogoutIcon}/>
-            </ListItemIcon>
-            <ListItemText primary={"Logout"} />
-          </ListItemButton>
-        </ListItem>
-      </List>
-    </Box>
-  );
-
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} sx={{backgroundColor:'#FFFFFF'}}>
+      <AppBar position="fixed" open={open}>
         <Toolbar>
           <IconButton
-            color="#FFFFFF"
+            color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
@@ -215,7 +113,7 @@ export default function MiniDrawer() {
               ...(open && { display: 'none' }),
             }}
           >
-            <img src={HumbergerIcon} />
+            <MenuIcon />
           </IconButton>
         </Toolbar>
       </AppBar>
@@ -225,10 +123,62 @@ export default function MiniDrawer() {
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
         </DrawerHeader>
-        {list}
+        <Divider />
+        <List>
+          {['Dashboard', 'Task List', 'Accounts', 'Transfers'].map((text, index) => (
+            <ListItem key={text} disablePadding sx={{ display: 'block' }}>
+              <ListItemButton
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? 'initial' : 'center',
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                    color: '#A38526',
+                  }}
+                >
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+        <Divider />
+        <List>
+          {['Payments', 'Services', 'Trade'].map((text, index) => (
+            <ListItem key={text} disablePadding sx={{ display: 'block' }}>
+              <ListItemButton
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? 'initial' : 'center',
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                    color: '#A38526',
+                  }}
+                >
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
+        
       </Box>
     </Box>
   );
