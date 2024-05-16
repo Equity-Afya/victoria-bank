@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+import "./Header.css";
+
+const Header = () => {
+  return <div></div>;
+};
+
+export default Header;
+=======
 import './Header.css'
 const Header = () => {
   return (
@@ -26,3 +35,4 @@ const Header = () => {
 
 export default Header;
 
+>>>>>>> 349be5d984c64f7ff74cd89cce0684cb763da1ba
