@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled, useTheme } from '@mui/material/styles';
+import { createTheme, ThemeProvider, styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar from '@mui/material/AppBar';
@@ -16,17 +16,13 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import DashboardIcon from 'src/assets/icons/Dashboard.svg';
 import TasklistIcon from 'src/assets/icons/Tasklist.svg';
-import PaymentsIcon from 'src/assets/icons/payments.svg';
-import ServicesIcon from 'src/assets/icons/services.svg';
-import TradeIcon from 'src/assets/icons/trade.svg';
-import TransferIcon from 'src/assets/icons/transfer.svg';
+import PaymentsIcon from 'src/assets/icons/Payments.svg';
+import ServicesIcon from 'src/assets/icons/Services.svg';
+import TradeIcon from 'src/assets/icons/Trade.svg';
+import TransferIcon from 'src/assets/icons/Transfer.svg';
 import AccountIcon from 'src/assets/icons/Account.svg';
 import LogoutIcon from 'src/assets/icons/Logout.svg';
 import HumbergerIcon from 'src/assets/icons/Humburger.svg';
-
-
-
-
 
 const drawerWidth = 240;
 
@@ -56,7 +52,6 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'flex-end',
   padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
   ...theme.mixins.toolbar,
 }));
 
@@ -95,8 +90,14 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
+const theme = createTheme({
+  typography: {
+    fontFamily: 'Montserrat, sans-serif',
+  },
+});
+
 export default function MiniDrawer() {
-  const theme = useTheme();
+  const muiTheme = useTheme();
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
@@ -118,7 +119,7 @@ export default function MiniDrawer() {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-              < img src ={DashboardIcon} />
+              <img src={DashboardIcon} />
             </ListItemIcon>
             <ListItemText primary={"Dashboard"} />
           </ListItemButton>
@@ -127,7 +128,7 @@ export default function MiniDrawer() {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-              < img src={TasklistIcon} />
+              <img src={TasklistIcon} />
             </ListItemIcon>
             <ListItemText primary={"Task list"} />
           </ListItemButton>
@@ -136,7 +137,7 @@ export default function MiniDrawer() {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-             < img src={AccountIcon} />
+              <img src={AccountIcon} />
             </ListItemIcon>
             <ListItemText primary={"Account"} />
           </ListItemButton>
@@ -147,7 +148,7 @@ export default function MiniDrawer() {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-             < img src={TransferIcon} />
+              <img src={TransferIcon} />
             </ListItemIcon>
             <ListItemText primary={"Transfers"} />
           </ListItemButton>
@@ -158,7 +159,7 @@ export default function MiniDrawer() {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-               < img src={PaymentsIcon} />
+              <img src={PaymentsIcon} />
             </ListItemIcon>
             <ListItemText primary={"Payments"} />
           </ListItemButton>
@@ -169,7 +170,7 @@ export default function MiniDrawer() {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-              < img src={ServicesIcon} />
+              <img src={ServicesIcon} />
             </ListItemIcon>
             <ListItemText primary={"Services"} />
           </ListItemButton>
@@ -180,7 +181,7 @@ export default function MiniDrawer() {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-                < img src={TradeIcon} />
+              <img src={TradeIcon} />
             </ListItemIcon>
             <ListItemText primary={"Trade"} />
           </ListItemButton>
@@ -191,7 +192,7 @@ export default function MiniDrawer() {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-               < img src={LogoutIcon}/>
+              <img src={LogoutIcon} />
             </ListItemIcon>
             <ListItemText primary={"Logout"} />
           </ListItemButton>
@@ -201,35 +202,37 @@ export default function MiniDrawer() {
   );
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <AppBar position="fixed" open={open} sx={{backgroundColor:'#FFFFFF'}}>
-        <Toolbar>
-          <IconButton
-            color="#FFFFFF"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            sx={{
-              marginRight: 5,
-              ...(open && { display: 'none' }),
-            }}
-          >
-            <img src={HumbergerIcon} />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-      <Drawer variant="permanent" open={open}>
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-          </IconButton>
-        </DrawerHeader>
-        {list}
-      </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        <DrawerHeader />
+    <ThemeProvider theme={theme}>
+      <Box sx={{ display: 'flex' }}>
+        <CssBaseline />
+        <AppBar position="fixed" open={open} sx={{ backgroundColor: '#FFFFFF' }}>
+          <Toolbar>
+            <IconButton
+              color="#FFFFFF"
+              aria-label="open drawer"
+              onClick={handleDrawerOpen}
+              edge="start"
+              sx={{
+                marginRight: 5,
+                ...(open && { display: 'none' }),
+              }}
+            >
+              <img src={HumbergerIcon} />
+            </IconButton>
+          </Toolbar>
+        </AppBar>
+        <Drawer variant="permanent" open={open}>
+          <DrawerHeader>
+            <IconButton onClick={handleDrawerClose}>
+              {muiTheme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+            </IconButton>
+          </DrawerHeader>
+          {list}
+        </Drawer>
+        <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+          <DrawerHeader />
+        </Box>
       </Box>
-    </Box>
+    </ThemeProvider>
   );
 }
