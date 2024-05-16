@@ -193,7 +193,7 @@ function AddBeneficiaries() {
           />
         </Box>
 
-        <Button sx={{ textTransform: 'none', backgroundColor: "#031F4F !important", color: "#FFFFFF", width: "760px",height:"30px", marginLeft: "20px", marginTop: "7px",fontFamily: "montserrat" }} >
+        <Button sx={{ textTransform: 'none', backgroundColor: "#031F4F !important", color: "#FFFFFF", width: "760px",height:"30px", marginLeft: "20px", marginTop: "7px",fontFamily: "montserrat",fontWeight:"bold" }} >
           ADD BENEFICIARY +
         </Button>
       </Box>
