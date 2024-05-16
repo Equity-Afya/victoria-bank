@@ -8,7 +8,6 @@ function AppRoutes() {
     <Router>
       <Routes>
         <Route path="/dashboard" element={<DashboardPage />} />
-        <Route path="/" element={<LoginPage />} />
         <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
