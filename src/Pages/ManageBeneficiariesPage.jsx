@@ -1,6 +1,6 @@
 
 import Sidebar from '../components/Sidebar/Sidebar'
-import ManageBeneficiaries from '../components/ManageBeneficiaries'
+import ManageBeneficiaries from '../components/ManageBeneficiaries/ManageBeneficiaries'
 
 const ManageBeneficiariesPage = () => {
   return (

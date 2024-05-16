@@ -3,6 +3,7 @@ import DashboardPage from '../Pages/DashboardPage';
 import ManageBeneficiariesPage from "../Pages/ManageBeneficiariesPage";
 import AddBeneficiariespage from "../Pages/AddBeneficiariespage";import LoginPage from "src/Pages/LoginPage";
 
+
 function AppRoutes () {
     return (
         <Router>
@@ -12,7 +13,6 @@ function AppRoutes () {
               <Route path="/dashboard" element={<DashboardPage />} />
               <Route path="/add-beneficiaries" element={<AddBeneficiariespage />} />   
                 <Route path="/" element={<LoginPage />} />  
-  
             </Routes>
         </Router>
     )

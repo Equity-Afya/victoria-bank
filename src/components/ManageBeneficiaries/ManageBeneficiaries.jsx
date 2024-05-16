@@ -1,14 +1,16 @@
 import { useState } from 'react';
-import { Box, Paper, Typography, InputBase, IconButton, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import { Box, Paper, Typography, InputBase, IconButton, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, useMediaQuery } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import EditIcon from '@mui/icons-material/Edit';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import pdf from '../assets/icons/pdf.svg';
-import excel from '../assets/icons/excel.svg';
+import pdf from 'src/assets/icons/pdf.svg';
+import excel from 'src/assets/icons/excel.svg';
+import './ManageBeneficiaries.css';
 
 const ManageBeneficiaries = () => {
   const [beneficiaries, setBeneficiaries] = useState([]);
+  const isSmallScreen = useMediaQuery('(max-width:768px)');
 
   const handleAddBeneficiary = () => {
     setBeneficiaries([...beneficiaries, { id: Date.now(), name: 'New Beneficiary' }]);
@@ -17,14 +19,15 @@ const ManageBeneficiaries = () => {
   return (
     <Box
       sx={{
-        marginLeft: '550px',
+        marginLeft: isSmallScreen ? '16px' : '550px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        height: '60vh',
+        height: isSmallScreen ? 'auto' : '60vh',
         bgcolor: '#f5f5f5',
         padding: 2,
+        position: 'relative', // Add position relative to the container
       }}
     >
       {/* Container for the subtitles */}
@@ -37,12 +40,12 @@ const ManageBeneficiaries = () => {
         }}
       >
         {/* Subtitle on the left */}
-        <Typography variant="subtitle1" sx={{ marginLeft: '20px', color: '#01215B', fontFamily: '"Montserrat", sans-serif' }}>
+        <Typography variant="subtitle1" sx={{ marginLeft: '20px', color: '#01215B', fontFamily: '"Montserrat", sans-serif', fontWeight: 'bold' }}>
           Beneficiaries
         </Typography>
         {/* Subtitle on the right with Person Add Icon */}
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <Typography variant="subtitle1" sx={{ marginRight: '8px', textTransform: 'uppercase', color: '#A38526', fontFamily: '"Montserrat", sans-serif' }}>
+          <Typography variant="subtitle1" sx={{ marginRight: '8px', textTransform: 'uppercase', color: '#A38526', fontFamily: '"Montserrat", sans-serif', fontWeight: 'bold' }}>
             ADD BENEFICIARY
           </Typography>
           <PersonAddIcon fontSize="small" onClick={handleAddBeneficiary} />
@@ -51,13 +54,14 @@ const ManageBeneficiaries = () => {
       <Paper
         elevation={3}
         sx={{
-          width: '60vw',
-          height: '50vh',
+          width: isSmallScreen ? '90vw' : '60vw',
+          height: isSmallScreen ? 'auto' : '50vh',
           padding: 6,
           textAlign: 'left',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'flex-start',
+          position: 'relative', // Add position relative to the Paper component
         }}
       >
         {/* Search Bar */}
@@ -70,23 +74,26 @@ const ManageBeneficiaries = () => {
             marginBottom: '16px',
           }}
         >
-          <Box sx={{ backgroundColor: '#f0f0f0' ,width: '380px'}}>
-           <InputBase
-        placeholder="Search Beneficiary"
-        sx={{ marginRight: '8px', flexGrow: 1}}
-      />
-      <IconButton>
-        <SearchIcon />
-      </IconButton></Box>
-         
-          <Box sx={{ top: '-50px', marginLeft: '580px', gap: '15px', display: 'flex'}}>
-          <Box>
-          <img src={excel} alt="Excel"  />
+          <Box sx={{ backgroundColor: '#f0f0f0', width: isSmallScreen ? '100%' : '380px' }}>
+            <InputBase
+              placeholder="Search Beneficiary"
+              sx={{ marginRight: '100px', flexGrow: 1, borderRadius: '50px' }}
+            />
+            <IconButton>
+              <SearchIcon />
+            </IconButton>
           </Box>
-          <Box>
-          <img src={pdf} alt="PDF"  />
-          </Box>
-          
+        </Box>
+
+        {/* Overlay Images */}
+        <Box sx={{ position: 'absolute', top: '50px', left: '91%', transform: 'translateX(-50%)', zIndex: 1 }}>
+          <Box sx={{ display: 'flex', gap: '15px' }}>
+            <Box>
+              <img src={excel} alt="Excel" />
+            </Box>
+            <Box>
+              <img src={pdf} alt="PDF" />
+            </Box>
           </Box>
         </Box>
 
@@ -97,24 +104,19 @@ const ManageBeneficiaries = () => {
             justifyContent: 'space-between',
             width: '100%',
             marginBottom: '10px',
-
           }}
         >
           {/* Description Subtitle */}
-          <Typography variant="subtitle1" sx={{ color: '#01215B' }}>
+          <Typography variant="subtitle1" sx={{ color: '#01215B', fontWeight: 'bold',marginLeft: '10px' }}>
             Description
           </Typography>
-         <Box>
-         
-          
-          {/* Manage Subtitle */}
-          <Typography variant="subtitle1" sx={{ color: '#01215B', marginLeft: '800px' }}>
-            Manage
-          </Typography>
+          <Box>
+            {/* Manage Subtitle */}
+            <Typography variant="subtitle1" sx={{ color: '#01215B', marginLeft: isSmallScreen ? '0' : '800px', marginRight: '20px', fontWeight: 'bold' }}>
+              Manage
+            </Typography>
+          </Box>
         </Box>
-         </Box>
-          {/* Overlay Images */}
-          
 
         {/* Table Container */}
         <TableContainer>
@@ -122,14 +124,14 @@ const ManageBeneficiaries = () => {
             <TableHead>
               <TableRow>
                 <TableCell>Name</TableCell>
-                <TableCell>Action</TableCell>
+                <TableCell align="right">Action</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {beneficiaries.map((beneficiary) => (
                 <TableRow key={beneficiary.id}>
                   <TableCell>{beneficiary.name}</TableCell>
-                  <TableCell>
+                  <TableCell align="right">
                     <EditIcon />
                     <VisibilityIcon />
                   </TableCell>
@@ -160,5 +162,3 @@ const ManageBeneficiaries = () => {
 };
 
 export default ManageBeneficiaries;
-
-
