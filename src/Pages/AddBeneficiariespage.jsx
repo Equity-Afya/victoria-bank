@@ -1,30 +1,44 @@
-
-import AddBeneficiaries from '../components/AddBeneficiaries/AddBeneficiaries'
-import Services from '../components/Services/Services'
 import Sidebar from '../components/Sidebar/Sidebar'
+import Services from 'src/components/Services/Services'
 import { Box } from '@mui/material'
-import { useMediaQuery } from '@mui/material';
-
+import BottomCard from 'src/components/BottomCard/BottomCard'
+import AddBeneficiaries from 'src/components/AddBeneficiaries/AddBeneficiaries'
+import MyAccount from 'src/components/MyAccount/MyAccount'
+import Footer from 'src/components/Footer/Footer'
 
 function AddBeneficiariespage() {
-  const isMobile = useMediaQuery('(max-width: 600px)');
+  
   return (
-    <Box sx={{height:"100vh", flexDirection: isMobile ? "column" : "row"}}>
-        <Box sx={{display:"flex"}}>
-        <Box>
-      <Sidebar />
+    <Box >
+      <Box sx={{display:"flex"}}>
+      <Box>
+        <Sidebar/>
       </Box>
-        <Box>
-        <Box  sx={{marginTop:"130px",marginLeft:"334px"}}>
+      <Box>
+      <Box sx={{display:"flex"}}>
+        <Box sx={{marginTop:"60px"}}>
+        <MyAccount/>
+       </Box>
+       <Box>
+       <Box sx={{marginTop:"104px",marginLeft:"30px"}}>
         <Services/>
+       </Box>
+       <Box sx={{marginTop:"30px",marginLeft:"10px"}}>
+        <AddBeneficiaries/>
+       </Box>
+       </Box>
       </Box>
-      <Box  sx={{marginTop:"15px",marginLeft:"320px"}} >
-       <AddBeneficiaries/>
+      <Box sx={{}}>
+        <BottomCard/>
+      </Box> <Box>
+    <Footer/>
+     </Box>
+
       </Box>
-        </Box>
-        </Box>
-       
-     
+      </Box>
+      
+    
+      
     </Box>
   )
 }

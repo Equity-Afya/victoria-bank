@@ -11,7 +11,7 @@ function AddBeneficiaries() {
 
   return (
     <Box sx={{  height: "380px", marginTop: "0px" }}>
-      <Box sx={{ display: "flex", gap: "430px" }}>
+      <Box sx={{ display: "flex", gap: "400px" }}>
         <Typography sx={{ color: "#01215B", fontWeight: "bold", fontFamily: "montserrat", marginLeft: "20px" }}>
           Add Beneficiary
         </Typography>
