@@ -10,8 +10,8 @@ function AddBeneficiaries() {
   };
 
   return (
-    <Box sx={{ backgroundColor: "whitesmoke", height: "380px", marginTop: "0px" }}>
-      <Box sx={{ display: "flex", gap: "450px" }}>
+    <Box sx={{  height: "380px", marginTop: "0px" }}>
+      <Box sx={{ display: "flex", gap: "430px" }}>
         <Typography sx={{ color: "#01215B", fontWeight: "bold", fontFamily: "montserrat", marginLeft: "20px" }}>
           Add Beneficiary
         </Typography>
@@ -25,14 +25,14 @@ function AddBeneficiaries() {
           
         </Box>
       </Box>
-      <Box sx={{ backgroundColor: "white", marginLeft: "20px", marginRight: "20px", borderRadius: "6px", height: "265px" }}>
-        <Box sx={{ display: "flex", marginTop: "0px", paddingTop: "10px", paddingRight: "10px", marginLeft: "20px", gap: "10px" }}>
+      <Box sx={{ backgroundColor: "white", marginLeft: "20px", marginRight: "20px",boxShadow: "0 0 12px rgba(0, 0, 0, 0.25)", borderRadius: "6px", height: "245px" }}>
+        <Box sx={{ display: "flex", marginTop: "0px", paddingTop: "7px", paddingRight: "10px", marginLeft: "20px", gap: "10px" }}>
           <Button
             onClick={() => handleServiceClick("Within Bank")}
             sx={{
               textTransform: 'none',
               backgroundColor: selectedService === "Within Bank" ? "#031F4F" : "white",
-              color: selectedService === "Within Bank" ? "#FFFFFF" : "#031F4F",
+              color: selectedService === "Within Bank" ? "#FFFFFF" : "#A38526",
               width: "120px",
               border: `2px solid ${selectedService === "Within Bank" ? "#031F4F" : "#01215B"}`,
               fontFamily: "montserrat",
@@ -55,6 +55,7 @@ function AddBeneficiaries() {
               color: selectedService === "Other Banks - RTGS" ? "#FFFFFF" : "#A38526",
               border: `2px solid ${selectedService === "Other Banks - RTGS" ? "#031F4F" : "#01215B"}`,
               fontFamily: "montserrat",
+              width:"160px",
               height: "30px",
               cursor: "pointer", // Adding cursor here
               '&:hover': {
@@ -63,17 +64,18 @@ function AddBeneficiaries() {
               },
             }}
           >
-            Other Banks - RTGS
+            Other Banks-RTGS
           </Button>
           <Button
             onClick={() => handleServiceClick("Other Banks - EFT")}
             sx={{
               textTransform: 'none',
-              backgroundColor: selectedService === "Other Banks - EFT" ? "#031F4F" : "white",
+              backgroundColor: selectedService === "Other Banks - EFT" ? "#031F4F" : "#ffffff",
               color: selectedService === "Other Banks - EFT" ? "#FFFFFF" : "#A38526",
               border: `2px solid ${selectedService === "Other Banks - EFT" ? "#031F4F" : "#01215B"}`,
               fontFamily: "montserrat",
               height: "30px",
+              width:"150px",
               cursor: "pointer", // Adding cursor here
               '&:hover': {
                 backgroundColor: selectedService === "Other Banks - EFT" ? "#031F4F" : "white",
@@ -81,7 +83,7 @@ function AddBeneficiaries() {
               },
             }}
           >
-            Other Banks - EFT
+            Other Banks-EFT
           </Button>
           <Button
             onClick={() => handleServiceClick("International")}
@@ -141,11 +143,11 @@ function AddBeneficiaries() {
             mPesa
           </Button>
         </Box>
-        <Typography sx={{ color: "#01215B", fontWeight: "bold", fontFamily: "montserrat", marginLeft: "20px", marginTop: "20px" }}>
+        <Typography sx={{ color: "#01215B", fontWeight: "bold", fontFamily: "montserrat", marginLeft: "20px", marginTop: "15px" }}>
           Beneficiary Bank Details
         </Typography>
 
-        <Box sx={{ display: "flex", gap: "60px", marginLeft: "20px", marginTop: "5px" }}>
+        <Box sx={{ display: "flex", gap: "60px", marginLeft: "20px", marginTop: "3px" }}>
           <TextField sx={{ width: "350px", backgroundColor: "whitesmoke", '& input': { height: '14px' }, marginTop: '0px' }}
             label="Account Number"
           />
@@ -191,7 +193,7 @@ function AddBeneficiaries() {
           />
         </Box>
 
-        <Button sx={{ textTransform: 'none', backgroundColor: "#031F4F !important", color: "#FFFFFF", width: "760px", marginLeft: "20px", marginTop: "10px",fontFamily: "montserrat" }} >
+        <Button sx={{ textTransform: 'none', backgroundColor: "#031F4F !important", color: "#FFFFFF", width: "760px",height:"30px", marginLeft: "20px", marginTop: "7px",fontFamily: "montserrat" }} >
           ADD BENEFICIARY +
         </Button>
       </Box>
