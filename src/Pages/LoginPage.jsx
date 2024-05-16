@@ -30,13 +30,13 @@ export default function LoginPage() {
         <CssBaseline />
         <Grid
           item
-          xs={false}
-          sm={4}
-          md={7}
+          xs={12}
+          sm={8}
+          md={5}
           sx={{
+            m: 'auto',
             position: 'relative', // Set position to relative
             backgroundRepeat: 'no-repeat',
-            backgroundImage: `url("https://res.cloudinary.com/difjkimdu/image/upload/v1715773450/background-login-min_ixn7ri.jpg")` ,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

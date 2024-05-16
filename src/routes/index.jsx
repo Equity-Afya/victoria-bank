@@ -1,14 +1,21 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import DashboardPage from "../Pages/DashboardPage";
-import LoginPage from "src/Pages/LoginPage";
+import ManageBeneficiariesPage from "../Pages/ManageBeneficiariesPage";
+import AddBeneficiariespage from "../Pages/AddBeneficiariespage";
 import Login from "src/Pages/Login/Login";
 
 function AppRoutes() {
   return (
     <Router>
       <Routes>
+        <Route
+          path="/ManageBeneficiaries"
+          element={<ManageBeneficiariesPage />}
+        />
         <Route path="/dashboard" element={<DashboardPage />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/add-beneficiaries" element={<AddBeneficiariespage />} />
+        <Route path="/" element={<Login />} />
       </Routes>
     </Router>
   );
