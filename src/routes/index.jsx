@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import DashboardPage from '../Pages/DashboardPage';
 import ManageBeneficiariesPage from "../Pages/ManageBeneficiariesPage";
+import AddBeneficiariespage from "../Pages/AddBeneficiariespage";import LoginPage from "src/Pages/LoginPage";
 
 function AppRoutes () {
     return (
@@ -8,6 +9,10 @@ function AppRoutes () {
             <Routes>
               <Route path="/dashboard" element={<DashboardPage />} />   
               <Route path="/ManageBeneficiaries" element={<ManageBeneficiariesPage />} />
+              <Route path="/dashboard" element={<DashboardPage />} />
+              <Route path="/add-beneficiaries" element={<AddBeneficiariespage />} />   
+                <Route path="/" element={<LoginPage />} />  
+  
             </Routes>
         </Router>
     )
