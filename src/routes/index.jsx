@@ -1,7 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import DashboardPage from '../Pages/DashboardPage';
 import ManageBeneficiariesPage from "../Pages/ManageBeneficiariesPage";
 import AddBeneficiariespage from "../Pages/AddBeneficiariespage";import LoginPage from "src/Pages/LoginPage";
+import AddBeneficiariespage from "../Pages/AddBeneficiariespage";
+import LoginPage from "src/Pages/LoginPage";
+
 
 
 function AppRoutes () {
@@ -18,4 +22,4 @@ function AppRoutes () {
     )
 }
 
-export default AppRoutes
+export default AppRoutes;
