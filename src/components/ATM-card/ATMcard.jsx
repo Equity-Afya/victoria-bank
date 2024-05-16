@@ -5,7 +5,7 @@ const ATMcard = () => {
     <div className="atm-card">
       <div className="container-9">
         <div className="container-36">
-          <img className="group-4" src="./src/assets/vectors/logo.svg" />
+          <img className="group-4" src="./src/assets/vectors/Vlogo.svg" />
           <div className="vector">
             <img className="vector-50" src="./src/assets/vectors/chip.svg" />
           </div>

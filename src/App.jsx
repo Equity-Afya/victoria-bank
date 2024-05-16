@@ -1,12 +1,9 @@
-import "./App.css";
-import Header from "./components/Header/Header";
-import MyAccount from "./components/MyAccount/MyAccount";
+import AppRoutes from "./routes";
 
 function App() {
   return (
     <div>
-      <Header></Header>
-      <MyAccount></MyAccount>
+      <AppRoutes />
     </div>
   );
 }
