@@ -7,9 +7,9 @@ import { useMediaQuery } from '@mui/material';
 
 
 function AddBeneficiariespage() {
-  const isMobile = useMediaQuery('(max-width: 1600px)');
+  const isMobile = useMediaQuery('(max-width: 2000px)');
   return (
-    <Box sx={{backgroundColor: "whitesmoke",height:"100vh", flexDirection: isMobile ? "column" : "row",paddingLeft:"30px"}}>
+    <Box sx={{height:"100vh", flexDirection: isMobile ? "column" : "row",paddingLeft:"48px"}}>
         <Box sx={{display:"flex"}}>
         <Box>
       <Sidebar />
@@ -18,7 +18,7 @@ function AddBeneficiariespage() {
         <Box  sx={{marginTop:"130px",marginLeft:"290px"}}>
         <Services/>
       </Box>
-      <Box  sx={{marginTop:"20px",marginLeft:"275px"}} >
+      <Box  sx={{marginTop:"15px",marginLeft:"275px"}} >
        <AddBeneficiaries/>
       </Box>
         </Box>
