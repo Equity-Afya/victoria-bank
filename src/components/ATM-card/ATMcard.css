@@ -1,0 +1,95 @@
+.atm-card {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #01225d, #081732);
+  left: 290px;
+  top: 218px;
+  display: flex;
+  padding: 0 24px 0 22px;
+  width: 300px;
+  height: 194px;
+  box-sizing: border-box;
+  margin: 9px 0 9px 0;
+}
+
+.container-9 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 254px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+
+.group-4 {
+  width: 83.3px;
+  height: 36.3px;
+}
+
+.container-36 {
+  margin-bottom: 58.8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 254px;
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+
+.usd {
+  margin: 10px 0 11px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.rectangle-11 {
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+  right: 24px;
+  bottom: 38px;
+  width: 46px;
+  height: 27px;
+  align-items: center;
+  display: flex; /* Use Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.container-26 {
+  display: flex;
+  flex-direction: column;
+  /* box-sizing: border-box; */
+}
+
+.eliud-njogu {
+  margin-bottom: 4px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.container-12 {
+  overflow-wrap: break-word;
+  font-family: "Courier Prime";
+  font-weight: 400;
+  font-size: 15px;
+  color: #a38526;
+}
+
+.container-54 {
+  margin: 0 9px 0 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 254px;
+  box-sizing: border-box;
+  align-items: center;
+}
