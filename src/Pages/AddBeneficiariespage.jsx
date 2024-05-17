@@ -10,7 +10,7 @@ function AddBeneficiariespage() {
   
   return (
     <Box >
-      <Box sx={{display:"flex"}}>
+      <Box sx={{display:"flex",marginTop:"160px"}}>
       <Box>
         <Sidebar/>
       </Box>
@@ -20,7 +20,7 @@ function AddBeneficiariespage() {
         <MyAccount/>
        </Box>
        <Box>
-       <Box sx={{marginTop:"110px",marginLeft:"30px"}}>
+       <Box sx={{marginTop:"120px",marginLeft:"30px"}}>
         <Services/>
        </Box>
        <Box sx={{marginTop:"30px",marginLeft:"10px"}}>
