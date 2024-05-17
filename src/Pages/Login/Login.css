@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Montserrat";
+}
+
+.login-page {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.left-side {
+  width: 60%;
+  background-image: url("src/assets/images/BackgroundLogin1.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.mobile-banking {
+  color: #a38526;
+}
+
+.left-side-content h1 {
+  font-size: 2.5rem;
+  /* text-align: center; */
+}
+
+.right-side {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+}
+
+/* .logo {
+  margin-bottom: 20px;
+  width: 83.3px;
+  height: 36.3px;
+} */
+
+.logo {
+  background: url("./src/assets/images/logo.png") 50% / cover no-repeat;
+  margin: 0 0 38px 1px;
+  width: 169px;
+  height: 74px;
+}
+
+h2 {
+  margin-bottom: 30px;
+  color: #a38526;
+}
+
+.advice {
+  margin: 0 40.1px 28px 41.1px;
+  display: inline-block;
+  text-align: center;
+  overflow-wrap: break-word;
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #000000;
+  width: 350px;
+}
+
+.input-field {
+  width: 420px;
+  height: 50px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #d9d9d9;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: black;
+}
+
+.login-button {
+  width: 420px;
+  height: 50px;
+  background-color: #01215b;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.links a {
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.forgot-password-help {
+  width: 420px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #a38526;
+}
+.need-help {
+  color: #a38526;
+}
+
+.forgot-password {
+  color: #a38526;
+}
+
+.register {
+  color: #a38526;
+}
