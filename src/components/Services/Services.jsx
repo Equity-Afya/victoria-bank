@@ -15,7 +15,7 @@ function Services() {
   };
 
   return (
-    <Box sx={{marginTop:"50px",display:"flex",gap:"38px"}}>
+    <Box sx={{display:"flex",gap:"38px"}}>
       <Box
         onClick={() => handleServiceClick("Bill Payment")}
         sx={{

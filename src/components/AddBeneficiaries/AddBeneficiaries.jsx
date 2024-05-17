@@ -11,7 +11,7 @@ function AddBeneficiaries() {
 
   return (
     <Box sx={{  height: "380px", marginTop: "0px" }}>
-      <Box sx={{ display: "flex", gap: "430px" }}>
+      <Box sx={{ display: "flex", gap: "400px" }}>
         <Typography sx={{ color: "#01215B", fontWeight: "bold", fontFamily: "montserrat", marginLeft: "20px" }}>
           Add Beneficiary
         </Typography>
@@ -193,7 +193,7 @@ function AddBeneficiaries() {
           />
         </Box>
 
-        <Button sx={{ textTransform: 'none', backgroundColor: "#031F4F !important", color: "#FFFFFF", width: "760px",height:"30px", marginLeft: "20px", marginTop: "7px",fontFamily: "montserrat" }} >
+        <Button sx={{ textTransform: 'none', backgroundColor: "#031F4F !important", color: "#FFFFFF", width: "760px",height:"30px", marginLeft: "20px", marginTop: "7px",fontFamily: "montserrat",fontWeight:"bold" }} >
           ADD BENEFICIARY +
         </Button>
       </Box>
