@@ -19,15 +19,16 @@ const ManageBeneficiaries = () => {
   return (
     <Box
       sx={{
-        marginLeft: isSmallScreen ? '16px' : '550px',
+        //marginLeft: isSmallScreen ? '16px' : '350px',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
+        //alignItems: 'center',
         justifyContent: 'center',
-        height: isSmallScreen ? 'auto' : '60vh',
+        height: isSmallScreen ? 'auto' : '50vh',
         bgcolor: '#f5f5f5',
         padding: 2,
-        position: 'relative', // Add position relative to the container
+        //position: 'absolute', // Add position relative to the container
+        top: '180px',
       }}
     >
       {/* Container for the subtitles */}
