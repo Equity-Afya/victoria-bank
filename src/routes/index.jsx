@@ -17,7 +17,6 @@ function AppRoutes() {
         <Route path="/add-beneficiaries" element={<AddBeneficiariespage />} />
         <Route path="/" element={<Login />} />
         <Route path="/otp" element={<OTPPage />} />
-
       </Routes>
     </Router>
   );

@@ -1,21 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body,
-html {
-  height: 100%;
-  font-family: "Montserrat";
-}
-
 .login-page {
   display: flex;
   height: 100vh;
-  width: 100vw;
 }
-
 .left-side {
   width: 60%;
   background-image: url("src/assets/images/BackgroundOtp.jpeg");
@@ -26,6 +12,9 @@ html {
   align-items: center;
   color: white;
 }
+.left-side-content {
+  text-align: center;
+}
 .mobile-banking {
   color: #a38526;
 }
@@ -33,7 +22,6 @@ html {
   font-size: 2.5rem;
   text-align: center;
 }
-
 .right-side {
   width: 40%;
   display: flex;
@@ -48,23 +36,6 @@ html {
   margin: 0 0 38px 1px;
   width: 169px;
   height: 74px;
-}
-
-h2 {
-  margin-bottom: 30px;
-  color: #a38526;
-}
-
-.login-button {
-  width: 420px;
-  height: 50px;
-  background-color: #01215b;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  color: white;
-  cursor: pointer;
-  margin-bottom: 20px;
 }
 .otp {
   margin: 0 12px 9px 0;
@@ -87,51 +58,39 @@ h2 {
   line-height: 1.25;
   color: #000000;
 }
-.container-2 {
-  margin-bottom: 18px;
+.otp-input-container {
   display: flex;
-  flex-direction: row;
-  width: 387px;
-  box-sizing: border-box;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
-.rectangle-6 {
+
+.otp-digit {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  background: #d9d9d9;
-  margin-right: 10px;
-  width: 56px;
-  height: 50px;
+  background-color: #f0f0f0;
+  color: #080707;
 }
-.rectangle-7 {
-  border-radius: 5px;
-  background: #d9d9d9;
-  margin-right: 10px;
-  width: 56px;
-  height: 50px;
+.error-message {
+  color: red;
+  margin-bottom: 20px;
 }
-.rectangle-81 {
-  border-radius: 5px;
-  background: #d9d9d9;
-  margin-right: 9px;
-  width: 57px;
+.login-button {
+  width: 420px;
   height: 50px;
+  background-color: #01215b;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
-.rectangle-9 {
-  border-radius: 5px;
-  background: #d9d9d9;
-  margin-right: 10px;
-  width: 57px;
-  height: 50px;
-}
-.rectangle-10 {
-  border-radius: 5px;
-  background: #d9d9d9;
-  margin-right: 10px;
-  width: 56px;
-  height: 50px;
-}
-.rectangle-11 {
-  border-radius: 5px;
-  background: #d9d9d9;
-  width: 56px;
-  height: 50px;
+
+.login-button:hover {
+  background-color: #0056b3;
 }
