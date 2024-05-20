@@ -1,14 +1,14 @@
 .atm-card {
   border-radius: 10px;
   background: linear-gradient(180deg, #01225d, #081732);
-  left: 290px;
-  top: 218px;
+  left: 0px;
+  top: 28px;
   display: flex;
   padding: 0 24px 0 22px;
   width: 300px;
-  height: 194px;
+  height: 144px;
   box-sizing: border-box;
-  margin: 9px 0 9px 0;
+  margin: 4px 0 4px 0;
 }
 
 .container-9 {
@@ -22,8 +22,9 @@
 }
 
 .group-4 {
+  margin-top: 3px;
   width: 83.3px;
-  height: 36.3px;
+  height: 30.3px;
 }
 
 .container-36 {
@@ -33,7 +34,7 @@
   justify-content: space-between;
   width: 254px;
   box-sizing: border-box;
-  margin-top: 30px;
+  margin-top: 0px;
 }
 
 .usd {
@@ -52,7 +53,7 @@
   right: 24px;
   bottom: 38px;
   width: 46px;
-  height: 27px;
+  height: 17px;
   align-items: center;
   display: flex; /* Use Flexbox for centering */
   justify-content: center; /* Center horizontally */
@@ -66,7 +67,7 @@
 }
 
 .eliud-njogu {
-  margin-bottom: 4px;
+  margin-bottom: 0px;
   display: inline-block;
   align-self: flex-start;
   overflow-wrap: break-word;
@@ -82,6 +83,7 @@
   font-weight: 400;
   font-size: 15px;
   color: #a38526;
+  
 }
 
 .container-54 {
@@ -92,4 +94,8 @@
   width: 254px;
   box-sizing: border-box;
   align-items: center;
+}
+.vector {
+  margin-top: 4px;
+  margin-right: 10px;
 }

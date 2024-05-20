@@ -1,24 +1,26 @@
 .card {
-    background-image: url('https://res.cloudinary.com/difjkimdu/image/upload/v1715773450/background-login-min_ixn7ri.jpg');
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    padding: 20px;
-    border-radius: 18px;
-    height: 160px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  background-image: url('https://res.cloudinary.com/difjkimdu/image/upload/v1715773450/background-login-min_ixn7ri.jpg');
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 8px;
+  border-radius: 10px;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 99%;
+}
+
+.icons {
+  display: flex;
+  width: 400px;
+  padding-left: 100px;
   
-  .icons {
-    display: flex;
-    width: 400px;
-    padding-left: 100px;
-    
-  }
-  
-  .icons img {
-    width: 150px;
-    padding: 5px;
-  }
+}
+
+.icons img {
+  width: 150px;
+  padding: 2px;
+}

@@ -1,31 +1,40 @@
 
 import Sidebar from '../components/Sidebar/Sidebar'
 import ManageBeneficiaries from '../components/ManageBeneficiaries/ManageBeneficiaries'
-import MyAccount from 'src/components/MyAccount/MyAccount'
+import MyAccount from '../components/MyAccount/MyAccount'
 import { Box } from '@mui/material'
-import Footer from 'src/components/Footer/Footer'
-import BottomCard from 'src/components/BottomCard/BottomCard'
+import Footer from '../components/Footer/Footer'
+import BottomCard from '../components/BottomCard/BottomCard'
+import Header from '../components/Header/Header'
 
 const ManageBeneficiariesPage = () => {
   return (
-  
-    <Box  sx={{display: 'flex', marginLeft: '50px'}}>
-      <Box>
-      <Sidebar/>
-      </Box>
-      <Box>
-        <Box sx={{display: 'flex'}}>
-        <MyAccount/>
-        <Box sx={{marginLeft: '20px', marginTop: '50px'}}>
-        <ManageBeneficiaries/>
-        </Box>
-        </Box>
-      <BottomCard/>
-       <Footer/>
-      </Box>
-      
+ 
+    <Box sx={{ minHeight: "100vh", width: "100vw", display: 'flex',backgroundColor:"whitesmoke"}}>
+    <Box sx={{}}>
+    <Sidebar />
     </Box>
-  
+<Box>
+    <Header/>
+  </Box>
+    
+    <Box sx={{ flexGrow: 1, marginTop: "45px", flexDirection: 'column',position:"fixed",marginLeft:"100px"}}>
+      <Box sx={{ display: "flex" }}>
+        <Box>
+          <MyAccount />
+        </Box>
+        <Box sx={{ marginLeft: "10px" }}>
+          <Box>
+            <ManageBeneficiaries/>
+          </Box>
+        </Box>
+      </Box>
+      <Box sx={{}}>
+        <BottomCard />
+      </Box>
+      <Footer />
+    </Box>
+  </Box>
   )
 }
 

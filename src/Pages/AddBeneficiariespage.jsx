@@ -1,44 +1,43 @@
 import Sidebar from '../components/Sidebar/Sidebar'
-import Services from 'src/components/Services/Services'
+import Services from '../components/Services/Services'
 import { Box } from '@mui/material'
-import BottomCard from 'src/components/BottomCard/BottomCard'
-import AddBeneficiaries from 'src/components/AddBeneficiaries/AddBeneficiaries'
-import MyAccount from 'src/components/MyAccount/MyAccount'
-import Footer from 'src/components/Footer/Footer'
+import BottomCard from '../components/BottomCard/BottomCard'
+import AddBeneficiaries from '../components/AddBeneficiaries/AddBeneficiaries'
+import MyAccount from '../components/MyAccount/MyAccount'
+import Footer from '../components/Footer/Footer'
+import Header from "../components/Header/Header"
 
 function AddBeneficiariespage() {
   
   return (
-    <Box >
-      <Box sx={{display:"flex",marginTop:"160px"}}>
-      <Box>
-        <Sidebar/>
-      </Box>
-      <Box>
-      <Box sx={{display:"flex"}}>
-        <Box sx={{marginTop:"60px"}}>
-        <MyAccount/>
-       </Box>
-       <Box>
-       <Box sx={{marginTop:"120px",marginLeft:"30px"}}>
-        <Services/>
-       </Box>
-       <Box sx={{marginTop:"30px",marginLeft:"10px"}}>
-        <AddBeneficiaries/>
-       </Box>
-       </Box>
-      </Box>
-      <Box sx={{}}>
-        <BottomCard/>
-      </Box> <Box>
-    <Footer/>
-     </Box>
+    <Box sx={{ minHeight: "100vh", width: "100vw", display: 'flex',backgroundColor:"whitesmoke"}}>
 
+      <Box sx={{}}>
+      <Sidebar />
       </Box>
+ <Box>
+      <Header/>
+    </Box>
+      
+      <Box sx={{ flexGrow: 1, marginTop: "45px", flexDirection: 'column',position:"fixed",marginLeft:"100px"}}>
+        <Box sx={{ display: "flex" }}>
+          <Box>
+            <MyAccount />
+          </Box>
+          <Box sx={{ marginTop: "60px", marginLeft: "0px" }}>
+            <Box sx={{ marginLeft: "20px" }}>
+              <Services />
+            </Box>
+            <Box>
+              <AddBeneficiaries />
+            </Box>
+          </Box>
+        </Box>
+        <Box sx={{}}>
+          <BottomCard />
+        </Box>
+        <Footer />
       </Box>
-      
-    
-      
     </Box>
   )
 }

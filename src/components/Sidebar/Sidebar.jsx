@@ -14,17 +14,17 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import DashboardIcon from 'src/assets/icons/Dashboard.svg';
-import TasklistIcon from 'src/assets/icons/Tasklist.svg';
-import PaymentsIcon from 'src/assets/icons/Payments.svg';
-import ServicesIcon from 'src/assets/icons/Services.svg';
-import TradeIcon from 'src/assets/icons/Trade.svg';
-import TransferIcon from 'src/assets/icons/Transfer.svg';
-import AccountIcon from 'src/assets/icons/Account.svg';
-import LogoutIcon from 'src/assets/icons/Logout.svg';
-import HumbergerIcon from 'src/assets/icons/Humburger.svg';
+import DashboardIcon from "../../assets/icons/Dashboard.svg"
+import TasklistIcon from '../../assets/icons/Tasklist.svg';
+import PaymentsIcon from '../../assets/icons/Payments.svg';
+import ServicesIcon from '../../assets/icons/Services.svg';
+import TradeIcon from '../../assets/icons/Trade.svg';
+import TransferIcon from '../../assets/icons/Transfer.svg';
+import AccountIcon from '../../assets/icons/Account.svg';
+import LogoutIcon from '../../assets/icons/Logout.svg';
+import HumbergerIcon from '../../assets/icons/Humburger.svg';
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 const openedMixin = (theme) => ({
   width: drawerWidth,
@@ -47,12 +47,13 @@ const closedMixin = (theme) => ({
   },
 });
 
-const DrawerHeader = styled('div')(({ theme }) => ({
+const DrawerHeader = styled('div')(({ theme, open }) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'flex-end',
   padding: theme.spacing(0, 1),
   ...theme.mixins.toolbar,
+  backgroundColor: open ? 'whitesmoke' : 'whitesmoke', // Set background color to whitesmoke when open
 }));
 
 const AppBar = styled(MuiAppBar, {
@@ -71,6 +72,7 @@ const AppBar = styled(MuiAppBar, {
       duration: theme.transitions.duration.enteringScreen,
     }),
   }),
+  backgroundColor: 'whitesmoke', // Set background color to whitesmoke
 }));
 
 const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
@@ -110,45 +112,45 @@ export default function MiniDrawer() {
 
   const list = (
     <Box
-      sx={{ width: 250 }}
+      sx={{ width: 250,backgroundColor:"whitesmoke"}}
       role="presentation"
       onClick={handleDrawerClose}
       onKeyDown={handleDrawerClose}
     >
-      <List>
-        <ListItem disablePadding>
+      <List sx={{backgroundColor:"whitesmoke"}}>
+        <ListItem disablePadding sx={{height:"32px",backgroundColor:"whitesmoke"}}>
           <ListItemButton>
             <ListItemIcon>
-              <img src={DashboardIcon} />
+              <img src={DashboardIcon} style={{ height: '20px' }} />
             </ListItemIcon>
             <ListItemText primary={"Dashboard"} />
           </ListItemButton>
         </ListItem>
         <Divider />
-        <ListItem disablePadding>
+        <ListItem disablePadding sx={{height:"42px"}}>
           <ListItemButton>
             <ListItemIcon>
-              <img src={TasklistIcon} />
+              <img src={TasklistIcon} style={{ height: '20px' }} />
             </ListItemIcon>
             <ListItemText primary={"Task list"} />
           </ListItemButton>
         </ListItem>
         <Divider />
-        <ListItem disablePadding>
+        <ListItem disablePadding sx={{height:"32px"}}>
           <ListItemButton>
             <ListItemIcon>
-              <img src={AccountIcon} />
+              <img src={AccountIcon} style={{ height: '20px' }} />
             </ListItemIcon>
             <ListItemText primary={"Account"} />
           </ListItemButton>
         </ListItem>
       </List>
       <Divider />
-      <List>
-        <ListItem disablePadding>
+      <List >
+        <ListItem disablePadding sx={{height:"32px"}}>
           <ListItemButton>
             <ListItemIcon>
-              <img src={TransferIcon} />
+              <img src={TransferIcon} style={{ height: '20px' }} />
             </ListItemIcon>
             <ListItemText primary={"Transfers"} />
           </ListItemButton>
@@ -156,10 +158,10 @@ export default function MiniDrawer() {
       </List>
       <Divider />
       <List>
-        <ListItem disablePadding>
+        <ListItem disablePadding sx={{height:"32px"}}>
           <ListItemButton>
             <ListItemIcon>
-              <img src={PaymentsIcon} />
+              <img src={PaymentsIcon} style={{ height: '20px' }} />
             </ListItemIcon>
             <ListItemText primary={"Payments"} />
           </ListItemButton>
@@ -167,10 +169,10 @@ export default function MiniDrawer() {
       </List>
       <Divider />
       <List>
-        <ListItem disablePadding>
+        <ListItem disablePadding sx={{height:"32px"}}>
           <ListItemButton>
             <ListItemIcon>
-              <img src={ServicesIcon} />
+              <img src={ServicesIcon} style={{ height: '20px' }} />
             </ListItemIcon>
             <ListItemText primary={"Services"} />
           </ListItemButton>
@@ -178,21 +180,21 @@ export default function MiniDrawer() {
       </List>
       <Divider />
       <List>
-        <ListItem disablePadding>
+        <ListItem disablePadding sx={{height:"32px"}}>
           <ListItemButton>
             <ListItemIcon>
-              <img src={TradeIcon} />
+              <img src={TradeIcon} style={{ height: '20px' }} />
             </ListItemIcon>
             <ListItemText primary={"Trade"} />
           </ListItemButton>
         </ListItem>
       </List>
       <Divider />
-      <List>
-        <ListItem disablePadding>
+      <List sx={{height:"46%",backgroundColor:"whitesmoke"}}>
+        <ListItem disablePadding sx={{height:"32px",marginTop:"167px",backgroundColor:"whitesmoke"}}>
           <ListItemButton>
             <ListItemIcon>
-              <img src={LogoutIcon} />
+              <img src={LogoutIcon} style={{ height: '20px' }} />
             </ListItemIcon>
             <ListItemText primary={"Logout"} />
           </ListItemButton>
@@ -203,17 +205,19 @@ export default function MiniDrawer() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ display: 'flex' }}>
+      <Box sx={{ display: 'flex'}}>
         <CssBaseline />
-        <AppBar position="fixed" open={open} sx={{ backgroundColor: '#FFFFFF' }}>
-          <Toolbar>
+        <AppBar open={open} sx={{
+          backgroundColor: '#whitesmoke',
+          boxShadow: "none", height: "65px", width: 63, right: 'auto', left: 0,
+        }}>
+          <Toolbar >
             <IconButton
-              color="#FFFFFF"
               aria-label="open drawer"
               onClick={handleDrawerOpen}
               edge="start"
               sx={{
-                marginRight: 5,
+                marginRight: 5, height: "20px",
                 ...(open && { display: 'none' }),
               }}
             >
