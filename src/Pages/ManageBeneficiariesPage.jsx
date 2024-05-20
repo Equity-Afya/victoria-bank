@@ -16,7 +16,7 @@ const ManageBeneficiariesPage = () => {
       <Box>
         <Box sx={{display: 'flex'}}>
         <MyAccount/>
-        <Box sx={{marginLeft: '20px', marginTop: '50px'}}>
+        <Box sx={{marginLeft: '20px', marginTop: '30px'}}>
         <ManageBeneficiaries/>
         </Box>
         </Box>

@@ -19,16 +19,15 @@ const ManageBeneficiaries = () => {
   return (
     <Box
       sx={{
-        //marginLeft: isSmallScreen ? '16px' : '350px',
+        marginLeft: isSmallScreen ? '16px' : '30px',
         display: 'flex',
         flexDirection: 'column',
-        //alignItems: 'center',
+        alignItems: 'center',
         justifyContent: 'center',
-        height: isSmallScreen ? 'auto' : '50vh',
+        height: isSmallScreen ? 'auto' : '60vh',
         bgcolor: '#f5f5f5',
         padding: 2,
-        //position: 'absolute', // Add position relative to the container
-        top: '180px',
+        position: 'relative', // Add position relative to the container
       }}
     >
       {/* Container for the subtitles */}
@@ -113,7 +112,7 @@ const ManageBeneficiaries = () => {
           </Typography>
           <Box>
             {/* Manage Subtitle */}
-            <Typography variant="subtitle1" sx={{ color: '#01215B', marginLeft: isSmallScreen ? '0' : '800px', marginRight: '20px', fontWeight: 'bold' }}>
+            <Typography variant="subtitle1" sx={{ color: '#01215B', marginRight: '20px', fontWeight: 'bold' }}>
               Manage
             </Typography>
           </Box>
