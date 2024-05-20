@@ -28,7 +28,14 @@ function Services() {
           flexDirection:"column",
           justifyContent:"center",
           alignItems:"center",
-          cursor:"pointer"
+          cursor:"pointer",transition: "background-color 0.3s ease",
+          "&:hover": {
+            backgroundColor: "#031F4F",
+            "& > *": {
+              color: "white", // Set text color to white on hover
+            }
+          },
+          
         }}
       >
         <img src={Billpayment} alt="Bill Payment" />
@@ -46,7 +53,14 @@ function Services() {
           flexDirection:"column",
           justifyContent:"center",
           alignItems:"center",
-          cursor:"pointer"
+          cursor:"pointer",transition: "background-color 0.3s ease",
+          "&:hover": {
+            backgroundColor: "#031F4F",
+            "& > *": {
+              color: "white", // Set text color to white on hover
+            }
+          },
+
         }}
       >
         <img src={Buyairtime} alt="Buy airtime" />
@@ -64,7 +78,14 @@ function Services() {
           flexDirection:"column",
           justifyContent:"center",
           alignItems:"center",
-          cursor:"pointer"
+          cursor:"pointer",transition: "background-color 0.3s ease",
+          "&:hover": {
+            backgroundColor: "#031F4F",
+            "& > *": {
+              color: "white", // Set text color to white on hover
+            }
+          },
+
         }}
       >
         <img src={Mpesa} alt="MPESA" />
@@ -82,7 +103,15 @@ function Services() {
           flexDirection:"column",
           justifyContent:"center",
           alignItems:"center",
-          cursor:"pointer"
+          cursor:"pointer",
+          transition: "background-color 0.3s ease",
+          "&:hover": {
+            backgroundColor: "#031F4F",
+            "& > *": {
+              color: "white", // Set text color to white on hover
+            }
+          },
+
         }}
       >
         <img src={Pesalink} alt="PESALINK" />
@@ -100,7 +129,14 @@ function Services() {
           flexDirection:"column",
           justifyContent:"center",
           alignItems:"center",
-          cursor:"pointer"
+          cursor:"pointer",transition: "background-color 0.3s ease",
+          "&:hover": {
+            backgroundColor: "#031F4F",
+            "& > *": {
+              color: "white", // Set text color to white on hover
+            }
+          },
+
         }}
       >
         <img src={Beneficiary} alt="Beneficiary" />
@@ -118,7 +154,15 @@ function Services() {
           flexDirection:"column",
           justifyContent:"center",
           alignItems:"center",
-          cursor:"pointer"
+          cursor:"pointer",
+          transition: "background-color 0.3s ease",
+          "&:hover": {
+            backgroundColor: "#031F4F",
+            "& > *": {
+              color: "white", // Set text color to white on hover
+            }
+          },
+
         }}
       >
         <img src={Addaccount} alt="Add Account" />

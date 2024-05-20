@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { Box, Paper, Typography, InputBase, IconButton, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, useMediaQuery } from '@mui/material';
+import { Box,Typography, InputBase, IconButton, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, useMediaQuery } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import EditIcon from '@mui/icons-material/Edit';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import pdf from 'src/assets/icons/pdf.svg';
-import excel from 'src/assets/icons/excel.svg';
+import pdf from '../../assets/icons/pdf.svg';
+import excel from '../../assets/icons/excel.svg';
 import './ManageBeneficiaries.css';
 
 const ManageBeneficiaries = () => {
@@ -22,13 +22,15 @@ const ManageBeneficiaries = () => {
         //marginLeft: isSmallScreen ? '16px' : '350px',
         display: 'flex',
         flexDirection: 'column',
-        //alignItems: 'center',
+        alignItems: 'center',
         justifyContent: 'center',
-        height: isSmallScreen ? 'auto' : '50vh',
+        height: isSmallScreen ? 'auto' : '70vh',
         bgcolor: '#f5f5f5',
         padding: 2,
-        //position: 'absolute', // Add position relative to the container
-        top: '180px',
+        position: 'relative', // Add position relative to the container
+        top: '0px',
+        bottom:"20px"
+
       }}
     >
       {/* Container for the subtitles */}
@@ -52,11 +54,12 @@ const ManageBeneficiaries = () => {
           <PersonAddIcon fontSize="small" onClick={handleAddBeneficiary} />
         </Box>
       </Box>
-      <Paper
+      <Box
         elevation={3}
         sx={{
+        backgroundColor:"white",
           width: isSmallScreen ? '90vw' : '60vw',
-          height: isSmallScreen ? 'auto' : '50vh',
+          height:"100%",
           padding: 6,
           textAlign: 'left',
           display: 'flex',
@@ -113,7 +116,7 @@ const ManageBeneficiaries = () => {
           </Typography>
           <Box>
             {/* Manage Subtitle */}
-            <Typography variant="subtitle1" sx={{ color: '#01215B', marginLeft: isSmallScreen ? '0' : '800px', marginRight: '20px', fontWeight: 'bold' }}>
+            <Typography variant="subtitle1" sx={{ color: '#01215B', /*>marginLeft: isSmallScreen ? '0' : '800px'*/ marginRight: '20px', fontWeight: 'bold' }}>
               Manage
             </Typography>
           </Box>
@@ -157,7 +160,7 @@ const ManageBeneficiaries = () => {
             <Box sx={{ borderBottom: `1px solid #000`, flex: 1 }} />
           </Box>
         )}
-      </Paper>
+      </Box>
     </Box>
   );
 };

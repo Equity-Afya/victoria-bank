@@ -10,7 +10,7 @@ function AddBeneficiaries() {
   };
 
   return (
-    <Box sx={{  height: "380px", marginTop: "0px" }}>
+    <Box sx={{  height: "0px", marginTop: "20px" }}>
       <Box sx={{ display: "flex", gap: "400px" }}>
         <Typography sx={{ color: "#01215B", fontWeight: "bold", fontFamily: "montserrat", marginLeft: "20px" }}>
           Add Beneficiary
@@ -37,12 +37,13 @@ function AddBeneficiaries() {
               border: `2px solid ${selectedService === "Within Bank" ? "#031F4F" : "#01215B"}`,
               fontFamily: "montserrat",
               height: "30px",
-              textSize: "5px",
-              cursor: "pointer", // Adding cursor here
+              cursor: "pointer",
               '&:hover': {
-                backgroundColor: selectedService === "Within Bank" ? "#031F4F" : "white",
-                borderColor: "#01215B", // Change border color on hover
+                backgroundColor: selectedService !== "Within Bank" ? "#031F4F" : selectedService === "Within Bank" ? "#031F4F" : "white",
+                color: selectedService !== "Within Bank" ? "#FFFFFF" : "#A38526",
+                borderColor: "#01215B",
               },
+
             }}
           >
             Within Bank
@@ -59,8 +60,9 @@ function AddBeneficiaries() {
               height: "30px",
               cursor: "pointer", // Adding cursor here
               '&:hover': {
-                backgroundColor: selectedService === "Other Banks - RTGS" ? "#031F4F" : "white",
-                borderColor: "#01215B", // Change border color on hover
+                backgroundColor: selectedService !== "Within Bank" ? "#031F4F" : selectedService === "Other Banks - RTGS"  ? "#031F4F" : "white",
+                color: selectedService !== "Within Bank" ? "#FFFFFF" : "#A38526",
+                borderColor: "#01215B",
               },
             }}
           >
@@ -78,8 +80,9 @@ function AddBeneficiaries() {
               width:"150px",
               cursor: "pointer", // Adding cursor here
               '&:hover': {
-                backgroundColor: selectedService === "Other Banks - EFT" ? "#031F4F" : "white",
-                borderColor: "#01215B", // Change border color on hover
+                backgroundColor: selectedService !== "Within Bank" ? "#031F4F" : selectedService === "Other Banks - EFT"  ? "#031F4F" : "white",
+                color: selectedService !== "Within Bank" ? "#FFFFFF" : "#A38526",
+                borderColor: "#01215B",
               },
             }}
           >
@@ -97,8 +100,9 @@ function AddBeneficiaries() {
               height: "30px",
               cursor: "pointer", // Adding cursor here
               '&:hover': {
-                backgroundColor: selectedService === "International" ? "#031F4F" : "white",
-                borderColor: "#01215B", // Change border color on hover
+                backgroundColor: selectedService !== "Within Bank" ? "#031F4F" : selectedService === "International"   ? "#031F4F" : "white",
+                color: selectedService !== "Within Bank" ? "#FFFFFF" : "#A38526",
+                borderColor: "#01215B",
               },
             }}
           >
@@ -116,8 +120,9 @@ function AddBeneficiaries() {
               height: "30px",
               cursor: "pointer", // Adding cursor here
               '&:hover': {
-                backgroundColor: selectedService === "Pesalink" ? "#031F4F" : "white",
-                borderColor: "#01215B", // Change border color on hover
+                backgroundColor: selectedService !== "Within Bank" ? "#031F4F" : selectedService === "Pesalink"   ? "#031F4F" : "white",
+                color: selectedService !== "Within Bank" ? "#FFFFFF" : "#A38526",
+                borderColor: "#01215B",
               },
             }}
           >
@@ -135,8 +140,9 @@ function AddBeneficiaries() {
               height: "30px",
               cursor: "pointer", // Adding cursor here
               '&:hover': {
-                backgroundColor: selectedService === "mPesa" ? "#031F4F" : "white",
-                borderColor: "#01215B", // Change border color on hover
+                backgroundColor: selectedService !== "Within Bank" ? "#031F4F" : selectedService === "mPesa"   ? "#031F4F" : "white",
+                color: selectedService !== "Within Bank" ? "#FFFFFF" : "#A38526",
+                borderColor: "#01215B",
               },
             }}
           >

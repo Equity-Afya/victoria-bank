@@ -1,30 +1,45 @@
-/* eslint-disable no-unused-vars */
-import React from 'react'
 import Sidebar from '../components/Sidebar/Sidebar'
-import Footer from '../components/Footer/Footer'
-import MyAccount from 'src/components/MyAccount/MyAccount'
+import Services from '../components/Services/Services'
 import { Box } from '@mui/material'
-import Services from 'src/components/Services/Services'
-import BottomCard from 'src/components/BottomCard/BottomCard'
+import BottomCard from '../components/BottomCard/BottomCard'
 
-const Dashboard = () => {
+import MyAccount from '../components/MyAccount/MyAccount'
+import Footer from '../components/Footer/Footer'
+import Header from "../components/Header/Header"
+import RecentTransactions from "../components/RecentTransactions/RecentTransactions"
+
+function AddBeneficiariespage() {
+  
   return (
-    <div>
-      <Box>
-          <Sidebar />
+    <Box sx={{ minHeight: "100vh", width: "100vw", display: 'flex',backgroundColor:"whitesmoke"}}>
+
+      <Box sx={{}}>
+      <Sidebar />
       </Box>
-      <Box sx={{marginLeft:'300px'}}>
-      <Services />
+<Box>
+      <Header/>
+    </Box>
+      
+      <Box sx={{ flexGrow: 1, marginTop: "45px", flexDirection: 'column',position:"fixed",marginLeft:"100px"}}>
+        <Box sx={{ display: "flex" }}>
+          <Box>
+            <MyAccount />
           </Box>
-      <Box sx={{ marginLeft:'100px'}}>
-      <MyAccount />
-      <Box sx={{marginTop:'30px', marginBottom:'30px'}}>
+          <Box sx={{ marginTop: "60px", marginLeft: "0px" }}>
+            <Box sx={{ marginLeft: "20px" }}>
+              <Services />
+            </Box>
+            <Box>
+            <RecentTransactions/>
+            </Box>
+          </Box>
+        </Box>
+        <Box sx={{}}>
           <BottomCard />
+        </Box>
+        <Footer />
       </Box>
-      </Box>
-      <Footer />
-    </div>
+    </Box>
   )
 }
-
-export default Dashboard
+export default AddBeneficiariespage

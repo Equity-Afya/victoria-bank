@@ -1,20 +1,13 @@
-.my-account {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
 
 .container-56 {
   border-radius: 5px;
   background: #999964;
   position: relative;
   margin: 9px 0 9px 0;
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 13px 14px 13px 17px;
   width: 300px;
-  height: 44px;
+  height: 24px;
   box-sizing: border-box;
 }
 
@@ -22,7 +15,7 @@
   border-radius: 10px;
   background: #ffffff;
   position: relative;
-  margin: 0 7px 23px 0;
+  margin: 0 0px 0px 0;
   display: flex;
   flex-direction: column;
   padding: 17px 20px 17px 24px;
@@ -30,7 +23,7 @@
   box-sizing: border-box;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
   margin: 9px 0 9px 0;
-  height: 82px;
+  height: 62px;
 }
 
 .select-account {
@@ -46,7 +39,7 @@
 
 .icon {
   width: 18px;
-  height: 18px;
+  height: 14px;
 }
 
 .container-56 {
@@ -58,8 +51,8 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 13px 14px 13px 17px;
-  width: 300px;
-  height: 44px;
+  width: 100%;
+  height: 34px;
   box-sizing: border-box;
   background: #ffffff;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
@@ -74,7 +67,7 @@
 }
 
 .actual-balance {
-  margin-bottom: 9px;
+  margin-bottom: 0px;
   display: inline-block;
   align-self: flex-start;
   overflow-wrap: break-word;
@@ -97,7 +90,7 @@
 .container-20 {
   margin: 3px 0;
   width: 27px;
-  height: 18px;
+  height: 14px;
 }
 
 .my-accounts-text {
@@ -120,13 +113,13 @@
   padding: 12px 19px 19px 14px;
   width: 300px;
   box-sizing: border-box;
-  height: 57px;
+  height: 47px;
 }
 
 .icon-1 {
   margin-right: 12px;
   width: 18px;
-  height: 18px;
+  height: 14px;
 }
 
 .pending-tasks {
@@ -140,9 +133,9 @@
 }
 
 .container {
-  position: absolute;
+
   right: 19px;
-  bottom: 12px;
+  bottom: 0px;
   overflow-wrap: break-word;
   font-family: "Montserrat";
   font-weight: 700;
@@ -151,7 +144,7 @@
 }
 
 .total {
-  margin-bottom: 16px;
+  margin-bottom: 0px;
   display: inline-block;
   overflow-wrap: break-word;
   font-family: "Montserrat";
