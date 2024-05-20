@@ -10,7 +10,7 @@ import Header from "../components/Header/Header"
 function AddBeneficiariespage() {
   
   return (
-    <Box sx={{ minHeight: "100vh", width: "100vw", display: 'flex',backgroundColor:"whitesmoke"}}>
+    <Box sx={{ minHeight: "100vh", minWidth: "100vw", display: 'flex',backgroundColor:"whitesmoke"}}>
 
       <Box sx={{}}>
       <Sidebar />

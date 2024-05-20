@@ -10,7 +10,7 @@ function AddBeneficiaries() {
   };
 
   return (
-    <Box sx={{  height: "0px", marginTop: "20px" }}>
+    <Box sx={{  height: "0px", marginTop: "20px",width:"100%" }}>
       <Box sx={{ display: "flex", gap: "400px" }}>
         <Typography sx={{ color: "#01215B", fontWeight: "bold", fontFamily: "montserrat", marginLeft: "20px" }}>
           Add Beneficiary
@@ -25,7 +25,7 @@ function AddBeneficiaries() {
           
         </Box>
       </Box>
-      <Box sx={{ backgroundColor: "white", marginLeft: "20px", marginRight: "20px",boxShadow: "0 0 12px rgba(0, 0, 0, 0.25)", borderRadius: "6px", height: "245px" }}>
+      <Box sx={{ backgroundColor: "white", marginLeft: "20px",width:"99%",marginRight: "20px",boxShadow: "0 0 12px rgba(0, 0, 0, 0.25)", borderRadius: "6px", height: "245px" }}>
         <Box sx={{ display: "flex", marginTop: "0px", paddingTop: "7px", paddingRight: "10px", marginLeft: "20px", gap: "10px" }}>
           <Button
             onClick={() => handleServiceClick("Within Bank")}
@@ -153,25 +153,25 @@ function AddBeneficiaries() {
           Beneficiary Bank Details
         </Typography>
 
-        <Box sx={{ display: "flex", gap: "60px", marginLeft: "20px", marginTop: "3px" }}>
-          <TextField sx={{ width: "350px", backgroundColor: "whitesmoke", '& input': { height: '14px' }, marginTop: '0px' }}
+        <Box sx={{ display: "flex", gap: "60px", marginLeft: "8px", marginTop: "3px" }}>
+          <TextField sx={{ width: "100%", backgroundColor: "whitesmoke", '& input': { height: '14px' }, marginTop: '0px' }}
             label="Account Number"
           />
           <TextField
 
             label=""
 
-            sx={{ width: "350px", backgroundColor: "whitesmoke", '& input': { height: '14px' }, marginTop: '0px' }}
+            sx={{ width: "100%", backgroundColor: "whitesmoke", '& input': { height: '14px' }, marginTop: '0px' }}
           >
           </TextField>
         </Box>
       
-        <Box sx={{ display: "flex", gap: "60px", marginLeft: "20px", marginTop: "13px", '& .MuiSelect-selectMenu': { paddingTop: '4px', paddingBottom: '4px' } }}>
+        <Box sx={{ display: "flex", gap: "60px", marginLeft: "8px", marginTop: "13px", '& .MuiSelect-selectMenu': { paddingTop: '4px', paddingBottom: '4px' } }}>
           <TextField
             select
             label="Select Currency"
             sx={{
-              width: "350px",
+              width: "100%",
               backgroundColor: "whitesmoke",
               '& .MuiSelect-selectMenu': {
                 paddingTop: '4px',
@@ -189,7 +189,7 @@ function AddBeneficiaries() {
 
           <TextField
             sx={{
-              width: "350px",
+              width: "100%",
               backgroundColor: "whitesmoke",
               height: "46px",
               '& input': { height: '14px' },
@@ -199,7 +199,7 @@ function AddBeneficiaries() {
           />
         </Box>
 
-        <Button sx={{ textTransform: 'none', backgroundColor: "#031F4F !important", color: "#FFFFFF", width: "760px",height:"30px", marginLeft: "20px", marginTop: "7px",fontFamily: "montserrat",fontWeight:"bold" }} >
+        <Button sx={{ textTransform: 'none', backgroundColor: "#031F4F !important", color: "#FFFFFF", width: "98%",height:"30px", marginLeft: "8px", marginTop: "7px",fontFamily: "montserrat",fontWeight:"bold" }} >
           ADD BENEFICIARY +
         </Button>
       </Box>

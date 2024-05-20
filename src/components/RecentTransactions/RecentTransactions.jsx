@@ -35,7 +35,7 @@ const cellStyle = {
 };
 
 const tableContainerStyle = {
-  width: '99%',
+  width: '100%',
 };
 
 const RecentTransactions = ({ accountNumber }) => {

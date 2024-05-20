@@ -8,7 +8,7 @@ import Footer from '../components/Footer/Footer'
 import Header from "../components/Header/Header"
 import RecentTransactions from "../components/RecentTransactions/RecentTransactions"
 
-function AddBeneficiariespage() {
+function DashboardPage() {
   
   return (
     <Box sx={{ minHeight: "100vh", width: "100vw", display: 'flex',backgroundColor:"whitesmoke"}}>
@@ -42,4 +42,4 @@ function AddBeneficiariespage() {
     </Box>
   )
 }
-export default AddBeneficiariespage
+export default DashboardPage
