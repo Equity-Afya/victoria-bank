@@ -24,7 +24,7 @@ const ManageBeneficiaries = () => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        height: isSmallScreen ? 'auto' : '70vh',
+        height: isSmallScreen ? 'auto' : '50vh',
         bgcolor: '#f5f5f5',
         padding: 2,
         position: 'relative', // Add position relative to the container

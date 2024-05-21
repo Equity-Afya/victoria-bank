@@ -1,7 +1,6 @@
 import Sidebar from '../components/Sidebar/Sidebar'
 import Services from '../components/Services/Services'
 import { Box } from '@mui/material'
-import BottomCard from '../components/BottomCard/BottomCard'
 import AddBeneficiaries from '../components/AddBeneficiaries/AddBeneficiaries'
 import MyAccount from '../components/MyAccount/MyAccount'
 import Footer from '../components/Footer/Footer'
@@ -15,26 +14,25 @@ function AddBeneficiariespage() {
       <Box sx={{}}>
       <Sidebar />
       </Box>
- <Box>
+<Box>
       <Header/>
     </Box>
       
-      <Box sx={{ flexGrow: 1, marginTop: "45px", flexDirection: 'column',position:"fixed",marginLeft:"100px"}}>
+      <Box sx={{ flexGrow: 1, marginTop: "45px", flexDirection: 'column',marginLeft:"0px"}}>
         <Box sx={{ display: "flex" }}>
           <Box>
             <MyAccount />
           </Box>
-          <Box sx={{ marginTop: "60px", marginLeft: "0px" }}>
-            <Box sx={{ marginLeft: "20px" }}>
+          <Box sx={{ marginTop: "40px", marginLeft: "20px" }}>
+            <Box sx={{ marginLeft: "20px"}}>
               <Services />
             </Box>
-            <Box>
-              <AddBeneficiaries />
+            <Box sx={{height:"10px",marginTop:"20px"}}>
+            <AddBeneficiaries/>
             </Box>
           </Box>
         </Box>
         <Box sx={{}}>
-          <BottomCard />
         </Box>
         <Footer />
       </Box>
