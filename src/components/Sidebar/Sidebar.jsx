@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { createTheme, ThemeProvider, styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
@@ -101,6 +102,15 @@ const theme = createTheme({
 export default function MiniDrawer() {
   const muiTheme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleNavigateDashboard= () => {
+    navigate("/dashboard"); // Navigate to the "manage-beneficiaries" page
+  };
+
+   const handleNavigateLogin= () => {
+    navigate("/"); // Navigate to the "manage-beneficiaries" page
+  };
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -119,7 +129,7 @@ export default function MiniDrawer() {
     >
       <List sx={{backgroundColor:"whitesmoke"}}>
         <ListItem disablePadding sx={{height:"32px",backgroundColor:"whitesmoke"}}>
-          <ListItemButton>
+          <ListItemButton   onClick={handleNavigateDashboard} >
             <ListItemIcon>
               <img src={DashboardIcon} style={{ height: '20px' }} />
             </ListItemIcon>
@@ -192,7 +202,7 @@ export default function MiniDrawer() {
       <Divider />
       <List sx={{height:"46%",backgroundColor:"whitesmoke"}}>
         <ListItem disablePadding sx={{height:"32px",marginTop:"167px",backgroundColor:"whitesmoke"}}>
-          <ListItemButton>
+          <ListItemButton  onClick={handleNavigateLogin}>
             <ListItemIcon>
               <img src={LogoutIcon} style={{ height: '20px' }} />
             </ListItemIcon>

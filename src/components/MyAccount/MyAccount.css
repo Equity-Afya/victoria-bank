@@ -2,16 +2,12 @@
   border-radius: 5px;
   background: #999964;
   position: relative;
-  margin: 4px 0 4px 0;
-  display: flex;
+  margin: 9px 0 9px 0;
   flex-direction: row;
   justify-content: space-between;
-  padding: 13px 14px 13px 17px;
-  width: 100%;
-  height: 34px;
+  width: 300px;
+  height: 24px;
   box-sizing: border-box;
-  background: #ffffff;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
 }
 
 .container-41 {
@@ -29,23 +25,6 @@
   height: 62px;
 }
 
-/* Add media queries for responsiveness */
-@media only screen and (max-width: 768px) {
-  .container-56 {
-    /* Adjust styles for smaller screens */
-    padding: 10px;
-    height: 24px;
-  }
-  
-  .container-41 {
-    /* Adjust styles for smaller screens */
-    height: 48px;
-    padding: 10px;
-  }
-  
-  /* Add more media queries as needed */
-}
-
 .select-account {
   margin: 0px 8.5px 1px 0;
   display: inline-block;
@@ -60,6 +39,22 @@
 .icon {
   width: 18px;
   height: 14px;
+}
+
+.container-56 {
+  border-radius: 5px;
+  background: #999964;
+  position: relative;
+  margin: 4px 0px 4px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 13px 14px 13px 17px;
+  width: 100%;
+  height: 34px;
+  box-sizing: border-box;
+  background: #ffffff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
 }
 
 .container-15 {
@@ -143,7 +138,7 @@
   overflow-wrap: break-word;
   font-family: "Montserrat";
   font-weight: 700;
-  font-size: 18px;
+  font-size: 20px;
   color: #01215b;
 }
 
@@ -188,4 +183,35 @@
   font-size: 16px;
   color: #01215b;
   margin: 4px 0 0 0;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 600px) {
+  /* Adjust styles for small screens */
+  .container-56 {
+    width: 80%; /* Adjust width for responsiveness */
+  }
+
+  .container-41 {
+    width: 80%;
+     padding: 17px 20px 17px 5px; /* Adjust padding for responsiveness */
+    align-items: center;  /* Adjust width for responsiveness */
+  }
+
+  .container-10 {
+    width: 80%; /* Adjust width for responsiveness */
+  }
+
+  .container-45 {
+    width: 80%; /* Adjust width for responsiveness */
+  }
+
+  .total {
+    font-size: 6px; /* Adjust font size for responsiveness */
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  /* Adjust styles for medium screens */
 }

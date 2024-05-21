@@ -136,3 +136,10 @@ h2 {
 .register {
   color: #a38526;
 }
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
